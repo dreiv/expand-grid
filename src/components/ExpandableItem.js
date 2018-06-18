@@ -1,26 +1,10 @@
 import React, { Component } from 'react'
 
 export default class ExpandableItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {isToggleOn: false};
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
-  }
-
   render() {
     return (
-      <li 
-      className={this.state.isToggleOn ? 'toggledOn': null}
-        onClick={this.handleClick}
-      >
+      <li className={this.props.isToggledOn ? 'toggledOn' : null}
+          onClick={this.props.onClick}>
         {this.props.item.name}
       </li>
     );
@@ -28,5 +12,7 @@ export default class ExpandableItem extends Component {
 }
 
 ExpandableItem.defaultProps = {
-  item: {}
+  item: {},
+  isToggledOn: false,
+  onClick: () => {}
 };

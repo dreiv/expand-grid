@@ -2,10 +2,8 @@ li {
 	display: inline-block;
 
 	box-sizing: border-box;
-	width: 18.75rem;
-	margin: 1em;
-
-	background: lightgray;
+	width: 25%;
+	margin-bottom: 1rem;
 }
 
 li.toggledOn {
@@ -14,6 +12,8 @@ li.toggledOn {
 
 .content {
 	height: 12.5rem;
+
+	background: lightgray;
 }
 
 .expanded {
@@ -22,10 +22,38 @@ li.toggledOn {
 	left: 0;
 
 	width: 100%;
-	height: 18.75rem;
-	margin-top: .625rem;
+	height: 18rem;
+	margin-top: 1rem;
 
 	text-align: left;
 
 	background: #ddd;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 37.5rem) {
+	li {
+		width: 100%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 37.5rem) {
+	li {
+		width: 49%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 48rem) {
+	li {
+		width: 32%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 62rem) {
+	li {
+		width: 24%;
+	}
 }

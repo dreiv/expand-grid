@@ -1,7 +1,11 @@
 .App {
 	position: relative;
 
-	max-width: 85%;
+	max-width: 62rem;
 	margin: 0 auto;
-	padding-left: 0;
+	padding: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }

@@ -1,0 +1,26 @@
+li {
+  width: 300px;
+  display: inline-block;
+  background: lightgray;
+  margin: 1em;
+  box-sizing: border-box;
+}
+
+li.toggledOn {
+  height: 500px;
+}
+
+.content {
+  height: 200px;
+}
+
+.expanded {
+  position: absolute;
+  background: #ddd;
+  top: auto;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+  height: 300px;
+}

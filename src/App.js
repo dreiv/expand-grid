@@ -14,8 +14,7 @@ class App extends Component {
     const handleClick = idx => this.setState({ activeIndex: idx })
 
     return (
-      <div className="App">
-        <ul className="grid">
+      <ul className="App">
           {data.map((item, idx) => (
             <ExpandableItem 
               key={idx} 
@@ -23,8 +22,7 @@ class App extends Component {
               isToggledOn={idx === this.state.activeIndex}
               onClick={() => handleClick(idx)}/>
             ))}
-        </ul>
-      </div>
+      </ul>
     )
   }
 }

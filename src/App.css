@@ -9,3 +9,8 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
+.App::after {
+	content: '';
+	width: 24%;
+}

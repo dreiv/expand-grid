@@ -1,4 +1,7 @@
 .App {
-  max-width: 85%;
-  margin: 0 auto;
+	position: relative;
+
+	max-width: 85%;
+	margin: 0 auto;
+	padding-left: 0;
 }

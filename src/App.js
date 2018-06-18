@@ -1,21 +1,15 @@
 import React, { Component } from 'react'
 import data from './data.json'
 import './App.css'
+import ExpandableItem from './components/ExpandableItem';
 
 class App extends Component {
 
-  handleClick() {
-    console.log('Click happened');
-  }
-
-  renderItem = (item, idx) => <li key={idx} onClick={this.handleClick}>{item.name}</li>
-
   render() {
-
     return (
       <div className="App">
         <ul className="grid">
-          {data.map(this.renderItem)}
+          {data.map((item, idx) => <ExpandableItem key={idx} item={item}/>)}
         </ul>
       </div>
     )

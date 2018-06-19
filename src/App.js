@@ -11,7 +11,9 @@ class App extends Component {
   }
 
   render() {
-    const handleClick = idx => this.setState({ activeIndex: idx })
+    const handleClick = idx => this.setState(prevState => ({
+      activeIndex: prevState.activeIndex !== idx ? idx : -1
+    }));
 
     return (
       <ul className="App">

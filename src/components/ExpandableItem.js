@@ -10,10 +10,8 @@ export default class ExpandableItem extends Component {
       </div>)
 
     return (
-      <li className={this.props.isToggledOn ? 'toggledOn' : null}
-          onClick={this.props.onClick}
-      >
-        <div className="content">
+      <li className={this.props.isToggledOn ? 'toggledOn' : null}>
+        <div className="content" onClick={this.props.onClick}>
           {this.props.item.name}
         </div>
         {this.props.isToggledOn && details(this.props.item)}

@@ -3,7 +3,7 @@ li {
 
 	box-sizing: border-box;
 	width: 25%;
-	margin-bottom: 1rem;
+	margin-bottom: .5rem;
 }
 
 li.toggledOn {
@@ -13,10 +13,11 @@ li.toggledOn {
 .content {
 	height: 12.5rem;
 
-	background: lightcoral;
+	background: bisque;
 	position: relative;
 	box-sizing: border-box;
-	padding: 1rem;
+  padding: 1rem;
+  margin-left: .5rem;
 }
 
 li.toggledOn .content::after {
@@ -28,7 +29,7 @@ li.toggledOn .content::after {
 	border: solid transparent;
 	height: 0;
 	width: 0;
-	border-bottom-color: orange;
+	border-bottom-color: lightsalmon;
 	border-width: 1.5rem;
 	pointer-events: none;
 	margin-left: -1.5rem;
@@ -39,14 +40,15 @@ li.toggledOn .content::after {
 	top: auto;
 	left: 0;
 
-	width: 100%;
+	width: calc(100% - .5rem);
 	height: 26.5rem;
-	margin-top: 1rem;
+  margin-top: 1rem;
+  margin-left: .5rem;
 
 	text-align: left;
 
 	padding: 1rem;
-	background: orange;
+	background: lightsalmon;
 	box-sizing: border-box;
 }
 
@@ -60,20 +62,20 @@ li.toggledOn .content::after {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 37.5rem) {
 	li {
-		width: 49%;
+		width: 50%;
 	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 48rem) {
 	li {
-		width: 32%;
+		width: 33.3%;
 	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 62rem) {
 	li {
-		width: 24%;
+		width: 25%;
 	}
 }

@@ -12,5 +12,5 @@
 
 .App::after {
 	content: '';
-	width: 24%;
+	flex: 1;
 }

@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import './ExpandableItem.css'
 
 export default class ExpandableItem extends Component {
+	componentDidUpdate = () => {
+		const focusNode = ReactDOM.findDOMNode(this.refs.expanded)
+		if (focusNode) {
+			focusNode.scrollIntoView({behavior: "smooth", block: "center"});;
+		}
+	};
+
   render() {
 
     const details = item => (
-      <div className="expanded">
+      <div className="expanded" ref="expanded">
         {item.description}
       </div>)
 

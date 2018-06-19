@@ -6,7 +6,7 @@ export default class ExpandableItem extends Component {
 	componentDidUpdate = () => {
 		const focusNode = ReactDOM.findDOMNode(this.refs.expanded)
 		if (focusNode) {
-			focusNode.scrollIntoView({behavior: "smooth", block: "center"});;
+      focusNode.scrollIntoView({behavior: "smooth", block: "center"})
 		}
 	};
 
